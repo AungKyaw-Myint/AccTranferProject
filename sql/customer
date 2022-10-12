@@ -1,0 +1,9 @@
+CREATE TABLE `customer` (
+  `customer_id` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `ph_no` varchar(50) NOT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `del_flag` varchar(1) DEFAULT NULL,
+  PRIMARY KEY (`customer_id`),
+  UNIQUE KEY `ph_no_UNIQUE` (`ph_no`)
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

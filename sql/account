@@ -1,0 +1,12 @@
+CREATE TABLE `account` (
+  `acc_id` int NOT NULL AUTO_INCREMENT,
+  `acc_no` varchar(45) NOT NULL,
+  `acc_type` varchar(5) NOT NULL,
+  `balance` double(24,4) NOT NULL,
+  `customer_id` int NOT NULL,
+  `del_flag` varchar(1) DEFAULT NULL,
+  PRIMARY KEY (`acc_id`),
+  UNIQUE KEY `acc_no_UNIQUE` (`acc_no`),
+  KEY `fk_key_idx` (`customer_id`),
+  CONSTRAINT `fk_customer_id` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

@@ -1,0 +1,11 @@
+CREATE TABLE `payment` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `account_no` varchar(45) NOT NULL,
+  `payment_id` varchar(45) NOT NULL,
+  `serial_no` int DEFAULT NULL,
+  `debit_credit` varchar(50) NOT NULL,
+  `type` varchar(10) NOT NULL,
+  `amount` double(24,4) NOT NULL,
+  `pay_date` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci

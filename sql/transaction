@@ -1,0 +1,9 @@
+CREATE TABLE `transaction` (
+  `tran_id` int NOT NULL AUTO_INCREMENT,
+  `tran_date` varchar(255) NOT NULL,
+  `tran_amount` double(24,4) NOT NULL,
+  `from_acc` varchar(255) DEFAULT NULL,
+  `to_acc` varchar(255) DEFAULT NULL,
+  `payment_id` varchar(255) NOT NULL,
+  PRIMARY KEY (`tran_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
